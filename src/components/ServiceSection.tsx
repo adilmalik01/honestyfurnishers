@@ -1,6 +1,6 @@
 "use client"
 import { motion } from "framer-motion";
-import Link from "next/link";
+import Image from "next/image";
 
 const servicesData = [
     {
@@ -41,7 +41,7 @@ const servicesData = [
     }
 ];
 
-const ServiceCard = ({ title, description, icon }: { title: string, description: string, icon: any }) => {
+const ServiceCard = ({ title, description, icon }: { title: string, description: string, icon: string }) => {
     return (
         <motion.div
             className="card bg-white shadow-md rounded-lg p-8"
@@ -57,7 +57,7 @@ const ServiceCard = ({ title, description, icon }: { title: string, description:
                     transition: { duration: 0.5 }
                 }}
             >
-                <img src={icon} className="w-8 h-8 text-green-600" alt="" />
+                <Image src={icon} width={100} height={100} className="w-8 h-8 text-green-600" alt="" />
             </motion.div>
             <h3 className="text-xl font-semibold mb-3">{title}</h3>
             <p className="text-gray-600">{description}</p>

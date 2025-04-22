@@ -3,7 +3,7 @@ import { useState, useEffect, useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import Image from 'next/image';
 
-const AnimatedCounter = ({ end, title, icon, delay = 0 }: any) => {
+const AnimatedCounter = ({ end, title, icon, delay = 0 }: { end: number, title: string, icon: React.ReactNode, delay: number }) => {
     const [count, setCount] = useState(0);
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -13,7 +13,7 @@ const AnimatedCounter = ({ end, title, icon, delay = 0 }: any) => {
             let startTimestamp: number;
             const duration = 2000; // ms
 
-            const step = (timestamp: any) => {
+            const step = (timestamp: number) => {
                 if (!startTimestamp) startTimestamp = timestamp;
                 const progress = Math.min((timestamp - startTimestamp) / duration, 1);
                 setCount(Math.floor(progress * end));

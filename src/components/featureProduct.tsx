@@ -4,8 +4,20 @@ import { useState, useEffect } from "react";
 import { motion } from 'framer-motion';
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import Image from "next/image";
 
-const productData = [
+interface Product {
+    id: number;
+    title: string;
+    category: string;
+    description: string;
+    image: string;
+
+  }
+  
+
+
+const productData:Product[] = [
     {
         "id": 1,
         "title": "Office Workstation",
@@ -134,22 +146,20 @@ const productData = [
     }
 ];
 
-export default function FeaturedProducts() {
-    const [selectedCategory, setSelectedCategory] = useState("all");
-    const [filteredProducts, setFilteredProducts] = useState<any>([]);
-    const [displayedProducts, setDisplayedProducts] = useState<any>([]);
+    export default function FeaturedProducts() {
+        const [selectedCategory, setSelectedCategory] = useState("all");
+        const [displayedProducts, setDisplayedProducts] = useState<Product[]>([]);
 
-    const categories = ["all", ...Array.from(new Set(productData.map(product => product.category)))];
+        const categories = ["all", ...Array.from(new Set(productData.map(product => product.category)))];
 
-    useEffect(() => {
-        const filtered = selectedCategory === "all"
-            ? productData
-            : productData.filter(product => product.category === selectedCategory);
+        useEffect(() => {
+            const filtered = selectedCategory === "all"
+                ? productData
+                : productData.filter(product => product.category === selectedCategory);
 
-        setFilteredProducts(filtered);
 
-        setDisplayedProducts(filtered.slice(0, 6));
-    }, [selectedCategory]);
+            setDisplayedProducts(filtered.slice(0, 6));
+        }, [selectedCategory]);
 
     return (
         <section className="py-20 bg-white dark:bg-gray-900">
@@ -175,7 +185,7 @@ export default function FeaturedProducts() {
                 </div>
 
                 <div className="flex  flex-wrap justify-center gap-10">
-                    {displayedProducts.map((product: any) => (
+                    {displayedProducts.map((product:Product ) => (
                         <CardContainer key={product.id} className="inter-var w-[400px]">
                             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
                                 <CardItem
@@ -201,7 +211,7 @@ export default function FeaturedProducts() {
                                 </CardItem>
 
                                 <CardItem translateZ="100" className="w-full mt-4">
-                                    <img
+                                    <Image
                                         src={product.image}
                                         height="1000"
                                         width="1000"

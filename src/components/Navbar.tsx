@@ -19,9 +19,9 @@ export default function Navbar() {
         };
 
         window.addEventListener('scroll', handleScroll);
-        
+
         setActiveItem(window.location.pathname);
-        
+
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
@@ -33,8 +33,8 @@ export default function Navbar() {
 
     const logoVariants = {
         hidden: { opacity: 0, x: -20 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             x: 0,
             transition: { duration: 0.5 }
         }
@@ -42,27 +42,27 @@ export default function Navbar() {
 
     const menuItemVariants = {
         hidden: { opacity: 0, y: -10 },
-        visible: (custom:any) => ({
+        visible: (custom: number) => ({
             opacity: 1,
             y: 0,
             transition: { delay: custom * 0.1, duration: 0.3 }
         }),
-        hover: { 
-            scale: 1.05, 
-            color: "#10b981", 
-            transition: { duration: 0.2 } 
+        hover: {
+            scale: 1.05,
+            color: "#10b981",
+            transition: { duration: 0.2 }
         }
     };
 
     const mobileMenuVariants = {
         hidden: { opacity: 0, height: 0 },
-        visible: { 
-            opacity: 1, 
+        visible: {
+            opacity: 1,
             height: "auto",
             transition: { duration: 0.3, ease: "easeOut" }
         },
-        exit: { 
-            opacity: 0, 
+        exit: {
+            opacity: 0,
             height: 0,
             transition: { duration: 0.2, ease: "easeIn" }
         }
@@ -100,17 +100,16 @@ export default function Navbar() {
                                 whileHover="hover"
                                 variants={menuItemVariants}
                             >
-                                <Link 
-                                    href={item.path} 
-                                    className={`font-medium transition-all duration-300 relative px-2 py-1 rounded-md ${
-                                        activeItem === item.path 
-                                            ? 'text-emerald-600' 
+                                <Link
+                                    href={item.path}
+                                    className={`font-medium transition-all duration-300 relative px-2 py-1 rounded-md ${activeItem === item.path
+                                            ? 'text-emerald-600'
                                             : 'text-gray-800 hover:text-emerald-600'
-                                    }`}
+                                        }`}
                                 >
                                     {item.label}
                                     {activeItem === item.path && (
-                                        <motion.span 
+                                        <motion.span
                                             className="absolute bottom-0 left-0 w-full h-0.5 bg-emerald-500 rounded-full"
                                             layoutId="underline"
                                         />
@@ -118,7 +117,7 @@ export default function Navbar() {
                                 </Link>
                             </motion.div>
                         ))}
-                      
+
                     </nav>
 
                     <motion.button
@@ -139,7 +138,7 @@ export default function Navbar() {
                 {/* Mobile Menu with Animation */}
                 <AnimatePresence>
                     {mobileMenuOpen && (
-                        <motion.nav 
+                        <motion.nav
                             className="md:hidden mt-4 pt-4 border-t border-gray-200 overflow-hidden"
                             initial="hidden"
                             animate="visible"
@@ -158,11 +157,10 @@ export default function Navbar() {
                                     >
                                         <Link
                                             href={item.path}
-                                            className={`block transition-colors duration-300 ${
-                                                activeItem === item.path 
-                                                    ? 'text-emerald-600 font-semibold' 
+                                            className={`block transition-colors duration-300 ${activeItem === item.path
+                                                    ? 'text-emerald-600 font-semibold'
                                                     : 'text-gray-800 hover:text-emerald-600'
-                                            }`}
+                                                }`}
                                             onClick={toggleMobileMenu}
                                         >
                                             {item.label}
@@ -174,8 +172,8 @@ export default function Navbar() {
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ delay: navItems.length * 0.1 }}
                                 >
-                                    <Link 
-                                        href="/vip" 
+                                    <Link
+                                        href="/vip"
                                         className="inline-block bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-4 py-2 rounded-lg font-medium shadow-md transition-all duration-300"
                                         onClick={toggleMobileMenu}
                                     >
