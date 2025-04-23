@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 export default function AboutSection() {
   return (
-    <div className="container mx-auto py-10  max-w-full">
-      <div className="flex flex-col md:flex-row rounded-lg overflow-hidden bg-gradient-to-r from-white via-white to-green-400">
+    <div id="about" className="container mx-auto  flex  items-center px-5 h-screen py-10  max-w-full">
+      <div className="flex flex-col md:flex-row rounded-lg  overflow-hidden bg-gradient-to-r from-white via-white to-green-400">
         <motion.div 
           className="w-full md:w-1/2 p-6 md:p-10"
           initial={{ opacity: 0, x: -50 }}

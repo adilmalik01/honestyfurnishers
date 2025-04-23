@@ -1,9 +1,9 @@
 "use client"
-import Link from 'next/link';
 import HeroSection from '@/components/HeroSection';
 import AboutSection from '@/components/AboutSection';
 import FeaturedProducts from '@/components/featureProduct';
 import ServicesSection from '@/components/ServiceSection';
+import ContactComponent from '@/components/contactComponent';
 
 export default function Page() {
   return (
@@ -25,7 +25,7 @@ export default function Page() {
             <div className="card p-8">
               <div className="flex items-center mb-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                  
+
                 </div>
                 <div>
                   <h4 className="font-semibold">Ahmed Raza</h4>
@@ -49,7 +49,7 @@ export default function Page() {
             <div className="card p-8">
               <div className="flex items-center mb-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                 
+
                 </div>
                 <div>
                   <h4 className="font-semibold">Fatima Zahra</h4>
@@ -73,7 +73,7 @@ export default function Page() {
             <div className="card p-8">
               <div className="flex items-center mb-4">
                 <div className="relative w-12 h-12 rounded-full overflow-hidden mr-4">
-                 
+
                 </div>
                 <div>
                   <h4 className="font-semibold">Bilal Khan</h4>
@@ -95,12 +95,12 @@ export default function Page() {
             </div>
           </div>
 
-         
+
         </div>
       </section>
 
 
-      <section className="py-20 bg-gray-800 text-white">
+      <section id='why-choose' className="py-20 bg-gray-800 text-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Why Choose Honesty Furnishers?</h2>
           <p className="text-xl text-gray-300 text-center max-w-3xl mx-auto mb-16">
@@ -160,19 +160,7 @@ export default function Page() {
         </div>
       </section>
 
-      <section className="py-20 bg-green-600 text-white">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Transform Your Space?</h2>
-          <p className="text-xl mb-8 max-w-3xl mx-auto">
-            Contact us today for a free consultation and let our experts help you find the perfect furniture solution.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/contact" className="bg-white text-green-600 hover:bg-gray-100 font-medium py-3 px-8 rounded-md transition-all duration-300">
-              Schedule Consultation
-            </Link>
-          </div>
-        </div>
-      </section>
+      <ContactComponent />
 
       <style jsx global>{`
         .section-title {

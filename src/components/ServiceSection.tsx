@@ -67,7 +67,7 @@ const ServiceCard = ({ title, description, icon }: { title: string, description:
 
 const ServicesSection = () => {
     return (
-        <section className="py-20 bg-gray-100">
+        <section id="services" className="py-20 bg-gray-100">
             <div className="container mx-auto px-4">
                 <h2 className="section-title">Our Services</h2>
                 <p className="section-subtitle">

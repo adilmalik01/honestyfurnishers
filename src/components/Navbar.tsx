@@ -70,10 +70,11 @@ export default function Navbar() {
 
     const navItems = [
         { path: '/', label: 'Home' },
-        { path: '/about', label: 'About' },
-        { path: '/services', label: 'Services' },
-        { path: '/products', label: 'Products' },
-        { path: '/contact', label: 'Contact Us' }
+        { path: '#about', label: 'About',  },
+        { path: '#services', label: 'Services' },
+        { path: '#products', label: 'Products' },
+        { path: '#why-choose', label: 'Why Choose' },
+        { path: '#contact', label: 'Contact Us' }
     ];
 
     return (

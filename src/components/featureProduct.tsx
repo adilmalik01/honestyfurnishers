@@ -65,84 +65,84 @@ const productData:Product[] = [
         "title": "Modern Bedroom Set",
         "category": "Bedroom",
         "description": "Complete bedroom solution with bed, nightstands, and wardrobe in contemporary design.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/bed3.png"
     },
     {
         "id": 8,
         "title": "Queen Size Bed",
         "category": "Bedroom",
         "description": "Elegant queen size bed with padded headboard and solid wood frame.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/Queen.jpg"
     },
     {
         "id": 9,
         "title": "Wardrobe Cabinet",
         "category": "Bedroom",
         "description": "Spacious wardrobe with multiple compartments, drawers, and full-length mirror.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/Wardrobe.jpg"
     },
     {
         "id": 10,
         "title": "Bedside Table",
         "category": "Bedroom",
         "description": "Compact bedside table with drawer, perfect for keeping essentials within reach.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/Bedside.jpg"
     },
     {
         "id": 11,
         "title": "Dressing Table",
         "category": "Bedroom",
         "description": "Elegant dressing table with mirror and storage drawers for personal items.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/Dressing.jpg"
     },
     {
         "id": 12,
         "title": "Bedroom Bench",
         "category": "Bedroom",
         "description": "Comfortable bench for the foot of your bed with upholstered seat and storage space.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/Bedroom-bench.jpeg"
     },
     {
         "id": 13,
         "title": "Dining Table Set",
         "category": "Dining",
         "description": "6-seater dining table set with matching chairs, perfect for family meals and entertaining.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/Dining-table.webp"
     },
     {
         "id": 14,
         "title": "Bar Stool",
         "category": "Dining",
         "description": "Modern bar stool with adjustable height and comfortable seating for kitchen islands.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/bar-stool.jpg"
     },
     {
         "id": 15,
         "title": "Buffet Cabinet",
         "category": "Dining",
         "description": "Stylish buffet cabinet with ample storage for dinnerware, table linens, and serving pieces.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/buffet-cabinet.jpg"
     },
     {
         "id": 16,
         "title": "Round Dining Table",
         "category": "Dining",
         "description": "Elegant round dining table with solid wood construction, perfect for intimate gatherings.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/round-dinning-table.jpg"
     },
     {
         "id": 17,
         "title": "China Cabinet",
         "category": "Dining",
         "description": "Display and storage cabinet with glass doors for showcasing fine china and collectibles.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/china-cabinet.jpg"
     },
     {
         "id": 18,
         "title": "Dining Chair Set",
         "category": "Dining",
         "description": "Set of 4 dining chairs with ergonomic design and premium upholstery for comfort.",
-        "image": "/api/placeholder/400/320"
+        "image": "/products/chair-set.webp"
     }
 ];
 
@@ -162,7 +162,7 @@ const productData:Product[] = [
         }, [selectedCategory]);
 
     return (
-        <section className="py-20 bg-white dark:bg-gray-900">
+        <section  id="products" className="py-20 bg-white dark:bg-gray-900">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-4 dark:text-white">Our Featured Products</h2>
                 <p className="text-gray-600 dark:text-gray-300 text-center mb-8">
