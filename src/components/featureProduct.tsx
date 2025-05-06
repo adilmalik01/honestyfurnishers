@@ -5,6 +5,9 @@ import { motion } from 'framer-motion';
 
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import Image from "next/image";
+import { productData } from "@/data";
+
+
 
 interface Product {
     id: number;
@@ -12,157 +15,27 @@ interface Product {
     category: string;
     description: string;
     image: string;
-
-  }
-  
+}
 
 
-const productData:Product[] = [
-    {
-        "id": 1,
-        "title": "Office Workstation",
-        "category": "Office",
-        "description": "Modern office workstation with storage drawers, perfect for productive work environments.",
-        "image": "/products/offfice-workstation.png"
-    },
-    {
-        "id": 2,
-        "title": "Executive Chair",
-        "category": "Office",
-        "description": "Ergonomic executive chair with premium leather upholstery and adjustable settings.",
-        "image": "/products/executive-charis.jpg"
-    },
-    {
-        "id": 3,
-        "title": "Conference Table",
-        "category": "Office",
-        "description": "Premium wooden conference table for professional meeting spaces. Available in various finishes.",
-        "image": "/products/conference-table.jpg"
-    },
-    {
-        "id": 4,
-        "title": "Storage Cabinet",
-        "category": "Office",
-        "description": "Spacious storage cabinet for documents and office supplies with locking mechanism.",
-        "image": "/products/storage-cabinet.jpg"
-    },
-    {
-        "id": 5,
-        "title": "Office Bookshelf",
-        "category": "Office",
-        "description": "Modern bookshelf with adjustable shelves, perfect for organizing books and displaying awards.",
-        "image": "/products/office-bookshelf.png"
-    },
-    {
-        "id": 6,
-        "title": "Reception Desk",
-        "category": "Office",
-        "description": "Professional reception desk with curved design and built-in cable management.",
-        "image": "/products/reception-desk.jpg"
-    },
-    {
-        "id": 7,
-        "title": "Modern Bedroom Set",
-        "category": "Bedroom",
-        "description": "Complete bedroom solution with bed, nightstands, and wardrobe in contemporary design.",
-        "image": "/products/bed3.png"
-    },
-    {
-        "id": 8,
-        "title": "Queen Size Bed",
-        "category": "Bedroom",
-        "description": "Elegant queen size bed with padded headboard and solid wood frame.",
-        "image": "/products/Queen.jpg"
-    },
-    {
-        "id": 9,
-        "title": "Wardrobe Cabinet",
-        "category": "Bedroom",
-        "description": "Spacious wardrobe with multiple compartments, drawers, and full-length mirror.",
-        "image": "/products/Wardrobe.jpg"
-    },
-    {
-        "id": 10,
-        "title": "Bedside Table",
-        "category": "Bedroom",
-        "description": "Compact bedside table with drawer, perfect for keeping essentials within reach.",
-        "image": "/products/Bedside.jpg"
-    },
-    {
-        "id": 11,
-        "title": "Dressing Table",
-        "category": "Bedroom",
-        "description": "Elegant dressing table with mirror and storage drawers for personal items.",
-        "image": "/products/Dressing.jpg"
-    },
-    {
-        "id": 12,
-        "title": "Bedroom Bench",
-        "category": "Bedroom",
-        "description": "Comfortable bench for the foot of your bed with upholstered seat and storage space.",
-        "image": "/products/Bedroom-bench.jpeg"
-    },
-    {
-        "id": 13,
-        "title": "Dining Table Set",
-        "category": "Dining",
-        "description": "6-seater dining table set with matching chairs, perfect for family meals and entertaining.",
-        "image": "/products/Dining-table.webp"
-    },
-    {
-        "id": 14,
-        "title": "Bar Stool",
-        "category": "Dining",
-        "description": "Modern bar stool with adjustable height and comfortable seating for kitchen islands.",
-        "image": "/products/bar-stool.jpg"
-    },
-    {
-        "id": 15,
-        "title": "Buffet Cabinet",
-        "category": "Dining",
-        "description": "Stylish buffet cabinet with ample storage for dinnerware, table linens, and serving pieces.",
-        "image": "/products/buffet-cabinet.jpg"
-    },
-    {
-        "id": 16,
-        "title": "Round Dining Table",
-        "category": "Dining",
-        "description": "Elegant round dining table with solid wood construction, perfect for intimate gatherings.",
-        "image": "/products/round-dinning-table.jpg"
-    },
-    {
-        "id": 17,
-        "title": "China Cabinet",
-        "category": "Dining",
-        "description": "Display and storage cabinet with glass doors for showcasing fine china and collectibles.",
-        "image": "/products/china-cabinet.jpg"
-    },
-    {
-        "id": 18,
-        "title": "Dining Chair Set",
-        "category": "Dining",
-        "description": "Set of 4 dining chairs with ergonomic design and premium upholstery for comfort.",
-        "image": "/products/chair-set.webp"
-    }
-];
 
-    export default function FeaturedProducts() {
-        const [selectedCategory, setSelectedCategory] = useState("all");
-        const [displayedProducts, setDisplayedProducts] = useState<Product[]>([]);
+export default function FeaturedProducts() {
+    const [selectedCategory, setSelectedCategory] = useState("all");
+    const [displayedProducts, setDisplayedProducts] = useState<Product[]>([]);
 
-        const categories = ["all", ...Array.from(new Set(productData.map(product => product.category)))];
+    const categories = ["all", ...Array.from(new Set(productData.map(product => product.category)))];
 
-        useEffect(() => {
-            const filtered = selectedCategory === "all"
-                ? productData
-                : productData.filter(product => product.category === selectedCategory);
+    useEffect(() => {
+        const filtered = selectedCategory === "all"
+            ? productData
+            : productData.filter(product => product.category === selectedCategory);
 
 
-            setDisplayedProducts(filtered.slice(0, 6));
-        }, [selectedCategory]);
+        setDisplayedProducts(filtered.slice(0, 6));
+    }, [selectedCategory]);
 
     return (
-        <section  id="products" className="py-20 bg-white dark:bg-gray-900">
+        <section id="products" className="py-20 bg-white dark:bg-gray-900">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl font-bold text-center mb-4 dark:text-white">Our Featured Products</h2>
                 <p className="text-gray-600 dark:text-gray-300 text-center mb-8">
@@ -185,7 +58,7 @@ const productData:Product[] = [
                 </div>
 
                 <div className="flex  flex-wrap justify-center gap-10">
-                    {displayedProducts.map((product:Product ) => (
+                    {displayedProducts.map((product: Product) => (
                         <CardContainer key={product.id} className="inter-var w-[400px]">
                             <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-auto rounded-xl p-6 border">
                                 <CardItem

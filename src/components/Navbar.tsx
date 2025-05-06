@@ -70,7 +70,7 @@ export default function Navbar() {
 
     const navItems = [
         { path: '/', label: 'Home' },
-        { path: '#about', label: 'About',  },
+        { path: '#about', label: 'About', },
         { path: '#services', label: 'Services' },
         { path: '#products', label: 'Products' },
         { path: '#why-choose', label: 'Why Choose' },
@@ -102,10 +102,10 @@ export default function Navbar() {
                                 variants={menuItemVariants}
                             >
                                 <Link
-                                    href={item.path}
+                                    href={`/${item.path}`}
                                     className={`font-medium transition-all duration-300 relative px-2 py-1 rounded-md ${activeItem === item.path
-                                            ? 'text-emerald-600'
-                                            : 'text-gray-800 hover:text-emerald-600'
+                                        ? 'text-emerald-600'
+                                        : 'text-gray-800 hover:text-emerald-600'
                                         }`}
                                 >
                                     {item.label}
@@ -159,8 +159,8 @@ export default function Navbar() {
                                         <Link
                                             href={item.path}
                                             className={`block transition-colors duration-300 ${activeItem === item.path
-                                                    ? 'text-emerald-600 font-semibold'
-                                                    : 'text-gray-800 hover:text-emerald-600'
+                                                ? 'text-emerald-600 font-semibold'
+                                                : 'text-gray-800 hover:text-emerald-600'
                                                 }`}
                                             onClick={toggleMobileMenu}
                                         >

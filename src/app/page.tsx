@@ -4,10 +4,11 @@ import AboutSection from '@/components/AboutSection';
 import FeaturedProducts from '@/components/featureProduct';
 import ServicesSection from '@/components/ServiceSection';
 import ContactComponent from '@/components/contactComponent';
+import { SocialIcon } from 'react-social-icons';
 
 export default function Page() {
   return (
-    <>
+    <><>
       <HeroSection />
 
       <AboutSection />
@@ -162,6 +163,8 @@ export default function Page() {
 
       <ContactComponent />
 
+
+
       <style jsx global>{`
         .section-title {
           font-size: 2.25rem;
@@ -221,6 +224,10 @@ export default function Page() {
           color: white;
         }
       `}</style>
-    </>
+    </><div className="w-32 h-24 rounded-full  flex justify-center items-center fixed z-50 right-5 bottom-5">
+
+        <SocialIcon url="https://wa.me/+923002199196" network="whatsapp" style={{ height: 70, width: 70 }} />
+      </div></>
+
   );
-}
+} 
