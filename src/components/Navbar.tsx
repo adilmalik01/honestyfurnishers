@@ -71,7 +71,7 @@ export default function Navbar() {
     const navItems = [
         { path: '/', label: 'Home' },
         { path: '#about', label: 'About', },
-        { path: '#services', label: 'Services' },
+        { path: 'services', label: 'Services' },
         { path: '#products', label: 'Products' },
         { path: '#why-choose', label: 'Why Choose' },
         { path: '#contact', label: 'Contact Us' }
@@ -104,7 +104,7 @@ export default function Navbar() {
                                 <Link
                                     href={`/${item.path}`}
                                     className={`font-medium transition-all duration-300 relative px-2 py-1 rounded-md ${activeItem === item.path
-                                        ? 'text-emerald-600'
+                                           ? 'text-emerald-600'
                                         : 'text-gray-800 hover:text-emerald-600'
                                         }`}
                                 >

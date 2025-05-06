@@ -34,42 +34,7 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          
-          <div>
-            <h3 className="text-xl font-bold mb-4">Products</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/products?category=office" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Office Furniture
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=home" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Home Furniture
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=kitchen" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Kitchens
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=wardrobe" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Wardrobes
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=door" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Doors
-                </Link>
-              </li>
-              <li>
-                <Link href="/products?category=flooring" className="text-gray-300 hover:text-white transition-colors duration-300">
-                  Flooring
-                </Link>
-              </li>
-            </ul>
-          </div>
+
           
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
@@ -80,7 +45,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <Link href="#about" className="text-gray-300 hover:text-white transition-colors duration-300">
                   About Us
                 </Link>
               </li>
@@ -90,12 +55,12 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <Link href="#products" className="text-gray-300 hover:text-white transition-colors duration-300">
                   Products
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-gray-300 hover:text-white transition-colors duration-300">
+                <Link href="#contact" className="text-gray-300 hover:text-white transition-colors duration-300">
                   Contact Us
                 </Link>
               </li>

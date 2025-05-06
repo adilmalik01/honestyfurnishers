@@ -334,7 +334,7 @@ const Page = () => {
               className="px-8 py-3 bg-green-500 text-white font-semibold rounded-full border-2 border-green-500 hover:bg-white hover:text-green-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-200 focus:outline-none inline-flex items-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              href="/contact"
+              href="/"
             >
               Request a Custom Quote
               <ArrowRight className="ml-2 w-4 h-4" />
